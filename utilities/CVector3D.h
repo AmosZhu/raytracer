@@ -19,7 +19,16 @@ public:
 	CVector3D(double _x,double _y,double _z);
 	~CVector3D();
 
+	void Normalize();
 
+public:
+	CVector3D operator*(const double _s) const; //times a scalar
+	double operator*(const CVector3D& _rhs) const; //dot product
+	CVector3D operator^(const CVector3D& _rhs) const; //Cross product
+	CVector3D operator+(const CVector3D& _rhs) const;
+	CVector3D operator-(const CVector3D& _rhs) const;
+public:
+	friend CVector3D operator*(const double _lhs,const CVector3D& _rhs);
 	};
 
 

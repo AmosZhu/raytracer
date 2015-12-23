@@ -18,3 +18,4 @@ CRay::CRay(CPoint3D _o, CVector3D _d) :
 
 CRay::~CRay() {
 }
+

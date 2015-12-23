@@ -13,15 +13,19 @@ CViewPlane::CViewPlane() {
 CViewPlane::~CViewPlane() {
 }
 
-void CViewPlane::SetHorizontalResolution(int h) {
-	hres = h;
+void CViewPlane::SetHorizontalResolution(int _h) {
+	hres = _h;
 }
 
-void CViewPlane::SetVerticalResolution(int v) {
-	vres = v;
+void CViewPlane::SetVerticalResolution(int _v) {
+	vres = _v;
 }
 
-void CViewPlane::SetPixelSize(double s) {
-	size = s;
+void CViewPlane::SetPixelSize(double _s) {
+	size = _s;
+}
+
+void CViewPlane::SetNumSamples(int _n) {
+	nSamples = _n;
 }
 

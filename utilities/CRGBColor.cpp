@@ -11,15 +11,15 @@ CRGBColor::CRGBColor() :
 		r(0), g(0), b(0) {
 }
 
-CRGBColor::CRGBColor(const CRGBColor& obj) :
-		r(obj.r), g(obj.g), b(obj.b) {
+CRGBColor::CRGBColor(const CRGBColor& rhs) :
+		r(rhs.r), g(rhs.g), b(rhs.b) {
 }
 
-CRGBColor::CRGBColor(CRGBColor&& obj) :
-		r(obj.r), g(obj.g), b(obj.b) {
-	obj.r = 0;
-	obj.g = 0;
-	obj.b = 0;
+CRGBColor::CRGBColor(CRGBColor&& rhs) :
+		r(rhs.r), g(rhs.g), b(rhs.b) {
+	rhs.r = 0;
+	rhs.g = 0;
+	rhs.b = 0;
 }
 
 CRGBColor::CRGBColor(int _c) :
@@ -36,13 +36,13 @@ CRGBColor::~CRGBColor() {
 	b = 0;
 }
 
-CRGBColor& CRGBColor::operator=(const CRGBColor& obj) {
-	if (this == &obj) {
+CRGBColor& CRGBColor::operator=(const CRGBColor& rhs) {
+	if (this == &rhs) {
 		return *this;
 	}
-	r = obj.r;
-	g = obj.g;
-	b = obj.b;
+	r = rhs.r;
+	g = rhs.g;
+	b = rhs.b;
 
 	return *this;
 }

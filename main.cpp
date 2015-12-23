@@ -9,29 +9,19 @@
 #include "CDisplayScreen.h"
 #include "CWorld.h"
 
-void display() {
-	CDisplayScreen* hScreen = CDisplayScreen::GetInstance();
-	hScreen->Paint();
-}
+#include "UT_Sinusoid.h"
+#include "UT_Basic.h"
+#include "UT_NRook.h"
+#include "UT_MapDisk.h"
+#include "UT_MapSemisphere.h"
+#include "UT_AxixAlignedPerspective.h"
+#include "UT_Camera.h"
 
 int main(int argc, char *argv[]) {
-
-	glutInit(&argc, argv);
-	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
-	glutInitWindowSize(250, 250);
-	glutInitWindowPosition(20, 20);
-	glutCreateWindow("Hello");
-
-	/*
-	 * Add world
-	 */
-	CWorld world;
-	world.Build();
-	world.Render();
-
-	glutDisplayFunc(display);
-	glutMainLoop();
+	//UT_MapSemisphere();
+	//UT_Basic();
+	//UT_AxixAlignedPerspective();
+	UT_PinholeCamera();
 	return 1;
-
 }
 

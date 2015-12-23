@@ -14,14 +14,14 @@ public:
 
 public:
 	CRGBColor();
-	CRGBColor(const CRGBColor& obj);
-	CRGBColor(CRGBColor&& obj);
+	CRGBColor(const CRGBColor& rhs);
+	CRGBColor(CRGBColor&& rhs);
 	CRGBColor(int _c);
 	CRGBColor(int _r, int _g, int _b);
 	~CRGBColor();
 
 public:
-	CRGBColor& operator=(const CRGBColor& obj);
+	CRGBColor& operator=(const CRGBColor& rhs);
 
 };
 

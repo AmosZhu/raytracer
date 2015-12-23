@@ -17,7 +17,7 @@ class CTracer {
 public:
 	CTracer();
 	CTracer(CWorld* world);
-	~CTracer();
+	virtual ~CTracer();
 
 	virtual CRGBColor Trace_Ray(const CRay& ray);
 

@@ -13,8 +13,8 @@ class CRenderPixel
 {
 public:
 	CRenderPixel(int,int,int,int,int);
-	CRenderPixel(const CRenderPixel& obj);
-	CRenderPixel(CRenderPixel&& obj);
+	CRenderPixel(const CRenderPixel& rhs);
+	CRenderPixel(CRenderPixel&& rhs);
 	~CRenderPixel();
 
 public:

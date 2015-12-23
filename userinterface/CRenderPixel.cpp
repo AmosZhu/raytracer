@@ -11,12 +11,12 @@ CRenderPixel::CRenderPixel(int _x, int _y, int _r, int _g, int _b) :
 		x(_x), y(_y), r(_r), g(_g), b(_b) {
 }
 
-CRenderPixel::CRenderPixel(const CRenderPixel& obj) :
-		x(obj.x), y(obj.y), r(obj.r), g(obj.g), b(obj.b) {
+CRenderPixel::CRenderPixel(const CRenderPixel& rhs) :
+		x(rhs.x), y(rhs.y), r(rhs.r), g(rhs.g), b(rhs.b) {
 }
 
-CRenderPixel::CRenderPixel(CRenderPixel&& obj) :
-		x(obj.x), y(obj.y), r(obj.r), g(obj.g), b(obj.b) {
+CRenderPixel::CRenderPixel(CRenderPixel&& rhs) :
+		x(rhs.x), y(rhs.y), r(rhs.r), g(rhs.g), b(rhs.b) {
 }
 
 CRenderPixel::~CRenderPixel() {

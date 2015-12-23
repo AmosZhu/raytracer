@@ -9,17 +9,22 @@
 #define CGEOMETRICOBJECT_H_
 
 #include "CRay.h"
+#include "CRGBColor.h"
+#include "CShadeRec.h"
 
 class CGeometricObject {
-public:
-	static double epsilon;
-
 public:
 	CGeometricObject();
 	virtual ~CGeometricObject();
 
 	virtual CGeometricObject* Clone() const =0;
-	virtual bool Hit(const CRay& ray)=0;
+	virtual bool Hit(const CRay& _ray, double& _tmin,CShadeRec& _sr)=0;
+
+	void SetColor(const CRGBColor _color);
+	CRGBColor GetColor();
+
+private:
+	CRGBColor m_color;
 };
 
 #endif /* CGEOMETRICOBJECT_H_ */

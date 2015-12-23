@@ -14,14 +14,16 @@ public:
 	int hres;
 	int vres;
 	double size;
+	int nSamples;
 
 public:
 	CViewPlane();
 	~CViewPlane();
 
-	void SetHorizontalResolution(int h);
-	void SetVerticalResolution(int v);
-	void SetPixelSize(double s);
+	void SetHorizontalResolution(int _h);
+	void SetVerticalResolution(int _v);
+	void SetPixelSize(double _s);
+	void SetNumSamples(int _n);
 	};
 
 
