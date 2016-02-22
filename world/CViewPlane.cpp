@@ -8,6 +8,12 @@
 #include "CViewPlane.h"
 
 CViewPlane::CViewPlane() {
+	hres = 0;
+	vres = 0;
+	size = 0;
+	nSamples = 0;
+	sampler = nullptr;
+	depth = 0;
 }
 
 CViewPlane::~CViewPlane() {
@@ -29,3 +35,10 @@ void CViewPlane::SetNumSamples(int _n) {
 	nSamples = _n;
 }
 
+void CViewPlane::SetSampler(CSampler* _sampler) {
+	sampler = _sampler;
+}
+
+void CViewPlane::SetMaxDepth(double _d) {
+	depth = _d;
+}

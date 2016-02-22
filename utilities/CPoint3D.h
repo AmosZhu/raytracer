@@ -20,11 +20,17 @@ public:
 	CPoint3D(const CPoint3D& _rhs);
 	~CPoint3D();
 
+	double Distance(CPoint3D& _dst);
+
 public:
 	CPoint3D operator*(const double _s);
 	CPoint3D operator/(const double _s);
 	CPoint3D& operator=(const CPoint3D& _rhs);
+	CPoint3D operator+(const CVector3D& _rhs) const;
+	CPoint3D operator+(const CPoint3D& _rhs) const;
+	CPoint3D operator-(const CVector3D& _rhs) const;
 	CVector3D operator-(const CPoint3D& _rhs) const; //Point minus point is a vector
+
 };
 
 #endif /* CPOINT3D_H_ */

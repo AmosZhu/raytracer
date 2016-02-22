@@ -21,7 +21,10 @@ int main(int argc, char *argv[]) {
 	//UT_MapSemisphere();
 	//UT_Basic();
 	//UT_AxixAlignedPerspective();
-	UT_PinholeCamera();
+	//UT_PinholeCamera();
+	//UT_ThinlensCamera();
+	//UT_FishEyeCamera();
+	UT_StereoCamera();
 	return 1;
 }
 

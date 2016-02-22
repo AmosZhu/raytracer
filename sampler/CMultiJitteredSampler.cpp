@@ -45,7 +45,6 @@ void CMultiJitteredSampler::GenerateSamples() {
 	}
 	ShuffleXCoor();
 	ShuffleYCoor();
-
 }
 
 void CMultiJitteredSampler::ShuffleXCoor() {

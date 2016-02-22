@@ -28,8 +28,8 @@ CCamera::CCamera(CCamera&& _rhs) {
 	m_w = _rhs.m_w;
 }
 
-CCamera::~CCamera()
-{}
+CCamera::~CCamera() {
+}
 
 void CCamera::SetEye(CPoint3D _e) {
 	m_eye = _e;
@@ -46,7 +46,10 @@ void CCamera::SetUp(CVector3D _up) {
 void CCamera::Comput_UVW() {
 	m_w = m_eye - m_lookat;
 	m_w.Normalize();
-	m_u = m_w ^ m_up;
+	m_u = m_up ^ m_w;
 	m_u.Normalize();
-	m_v = m_u ^ m_w;
+	m_v = m_w ^ m_u;
+}
+
+void CCamera::Render_Stereo(CWorld* _world, double _x, int _offset) {
 }

@@ -14,15 +14,17 @@ public:
 
 public:
 	CRGBColor();
-	CRGBColor(const CRGBColor& rhs);
-	CRGBColor(CRGBColor&& rhs);
+	CRGBColor(const CRGBColor& _rhs);
+	CRGBColor(CRGBColor&& _rhs);
 	CRGBColor(int _c);
 	CRGBColor(int _r, int _g, int _b);
 	~CRGBColor();
 
 public:
-	CRGBColor& operator=(const CRGBColor& rhs);
-
+	CRGBColor& operator=(const CRGBColor& _rhs);
+	CRGBColor& operator+=(const CRGBColor& _rhs);
+	CRGBColor& operator/=(const int& _s);
+	CRGBColor& operator/=(const CRGBColor& _rhs);
 };
 
 #endif /* CRGBCOLOR_H_ */

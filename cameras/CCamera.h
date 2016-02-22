@@ -22,6 +22,7 @@ public:
 
 	void Comput_UVW();
 	virtual void Render_Scence(CWorld* _world)=0;
+	virtual void Render_Stereo(CWorld* _world,double _x, int _offset);
 	void SetEye(CPoint3D _e);
 	void SetLookat(CPoint3D _lookat);
 	void SetUp(CVector3D _up);

@@ -8,6 +8,7 @@
 #include "CWorld.h"
 #include "CSingleSphere.h"
 #include "CTracerMultipleObjects.h"
+#include "CMultiJitteredSampler.h"
 #include "common.h"
 #include "CPlane.h"
 
@@ -35,9 +36,13 @@ void CWorld::Destroy() {
 }
 
 void CWorld::Build() {
-	vp.SetHorizontalResolution(300);
-	vp.SetVerticalResolution(300);
-	vp.SetPixelSize(4);
+	int num_samples=1024;
+	vp.SetHorizontalResolution(120);
+	vp.SetVerticalResolution(120);
+	vp.SetPixelSize(8);
+	vp.SetNumSamples(num_samples);
+	vp.SetSampler(new CMultiJitteredSampler(num_samples));
+	vp.SetMaxDepth(0);
 
 	bg_color = CRGBColor(0, 0, 0);
 

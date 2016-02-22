@@ -11,15 +11,15 @@ CRGBColor::CRGBColor() :
 		r(0), g(0), b(0) {
 }
 
-CRGBColor::CRGBColor(const CRGBColor& rhs) :
-		r(rhs.r), g(rhs.g), b(rhs.b) {
+CRGBColor::CRGBColor(const CRGBColor& _rhs) :
+		r(_rhs.r), g(_rhs.g), b(_rhs.b) {
 }
 
-CRGBColor::CRGBColor(CRGBColor&& rhs) :
-		r(rhs.r), g(rhs.g), b(rhs.b) {
-	rhs.r = 0;
-	rhs.g = 0;
-	rhs.b = 0;
+CRGBColor::CRGBColor(CRGBColor&& _rhs) :
+		r(_rhs.r), g(_rhs.g), b(_rhs.b) {
+	_rhs.r = 0;
+	_rhs.g = 0;
+	_rhs.b = 0;
 }
 
 CRGBColor::CRGBColor(int _c) :
@@ -36,13 +36,34 @@ CRGBColor::~CRGBColor() {
 	b = 0;
 }
 
-CRGBColor& CRGBColor::operator=(const CRGBColor& rhs) {
-	if (this == &rhs) {
+CRGBColor& CRGBColor::operator=(const CRGBColor& _rhs) {
+	if (this == &_rhs) {
 		return *this;
 	}
-	r = rhs.r;
-	g = rhs.g;
-	b = rhs.b;
+	r = _rhs.r;
+	g = _rhs.g;
+	b = _rhs.b;
 
+	return *this;
+}
+
+CRGBColor& CRGBColor::operator+=(const CRGBColor& _rhs) {
+	r += _rhs.r;
+	g += _rhs.g;
+	b += _rhs.b;
+	return *this;
+}
+
+CRGBColor& CRGBColor::operator/=(const int& _s) {
+	r /= _s;
+	g /= _s;
+	b /= _s;
+	return *this;
+}
+
+CRGBColor& CRGBColor::operator/=(const CRGBColor& _rhs) {
+	r /= _rhs.r;
+	g /= _rhs.g;
+	b /= _rhs.b;
 	return *this;
 }

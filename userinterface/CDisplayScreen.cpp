@@ -30,7 +30,7 @@ void CDisplayScreen::OpenWindow(double _h, double _v, double _s) {
 	m_hres = _h;
 	m_vres = _v;
 	m_size = _s;
-	glutInitWindowSize(680,680);
+	glutInitWindowSize(800,800);
 	glutInitWindowPosition(20, 20);
 	glutCreateWindow("Single Sphere");
 	glClearColor(0, 0, 0, 0);

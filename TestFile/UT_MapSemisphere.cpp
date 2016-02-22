@@ -48,7 +48,7 @@ void UT_MapSemisphere() {
 	}
 
 	hScreen->OpenWindow(width, height, 1);
-	screen2.OpenWindow(width,height,1);
+	screen2.OpenWindow(width,height,0.2);
 	glutDisplayFunc(display);
 	glutMainLoop();
 }

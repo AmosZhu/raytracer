@@ -23,6 +23,8 @@ public:
 	CSphere sphere;
 	CRGBColor bg_color;
 	CCamera* camera_ptr;
+
+
 public:
 	CWorld();
 	~CWorld();

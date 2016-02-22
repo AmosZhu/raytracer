@@ -8,13 +8,16 @@
 #ifndef CVIEWPLANE_H_
 #define CVIEWPLANE_H_
 
-class CViewPlane
-{
+#include "CSampler.h"
+
+class CViewPlane {
 public:
 	int hres;
 	int vres;
 	double size;
 	int nSamples;
+	CSampler* sampler;
+	double depth;
 
 public:
 	CViewPlane();
@@ -24,8 +27,8 @@ public:
 	void SetVerticalResolution(int _v);
 	void SetPixelSize(double _s);
 	void SetNumSamples(int _n);
-	};
-
-
+	void SetSampler(CSampler* _sampler);
+	void SetMaxDepth(double _d);
+};
 
 #endif /* CVIEWPLANE_H_ */
